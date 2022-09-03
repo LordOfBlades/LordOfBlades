@@ -1,0 +1,38 @@
+﻿#main-label {
+    text-align: center; font-size: 20px;
+    border: 5px solid #e60000;
+}
+/*
+    label tag ID
+*/
+#lesson-lbl {
+    font-size: 10px;
+    border: 1px solid #e60000;
+}
+
+.nav-link {
+    font-size: 10px;
+}
+/*
+    Header tag ID
+*/
+#content-header {
+    text-align: center;    font-size: 20px;
+    border-block-width: 100px;
+    background-color: rgba(255,0,0,.2);    border: 5px solid #2ae6df;
+}
+/*
+    Paragraph tag ID
+*/
+#content-topic {
+    background-color:#1be8dc;
+}
+
+#content-text {
+    text-align: center;
+    text-justify: auto;
+    margin-left: 50px;
+}
+
+body {
+}

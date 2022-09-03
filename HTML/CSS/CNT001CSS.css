@@ -1,0 +1,339 @@
+﻿* {
+    background-color: rgba(255,0,0,.2);
+}
+
+* * {
+    background-color: rgba(0,255,0,.2);
+}
+
+    * * * {
+        background-color: rgba(0,0,255,.2);
+    }
+
+        * * * * {
+            background-color: rgba(255,0,255,.2);
+        }
+
+            * * * * * {
+                background-color: rgba(0,255,255,.2);
+            }
+
+                * * * * * * {
+                    background-color: rgba(255,255,0,.2);
+                }
+
+                    * * * * * * * {
+                        background-color: rgba(255,0,0,.2);
+                    }
+
+                        * * * * * * * * {
+                            background-color: rgba(0,255,0,.2);
+                        }
+
+                            * * * * * * * * * {
+                                background-color: rgba(0,0,255,.2);
+                            }
+
+main {
+}
+
+div {
+    
+}
+
+a {
+    float: left;
+}
+
+p {
+    text-align: center;
+    font-size: 20px;
+}
+
+iframe {
+    width: 300px;
+    height: 200px;
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffcc00, 0 0 40px #ffcc00, 0 0 50px #bb99ff, 0 0 60px #bb99ff, 0 0 70px #bb99ff;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #cca300, 0 0 40px #cca300, 0 0 50px #cca300, 0 0 60px #cca300, 0 0 70px #cca300, 0 0 80px #cca300;
+    }
+}
+
+label {
+    height: 30px;
+    font-size: 20px;
+    color: #ff1a1a;
+    padding: 12px 5px 5px 5px;
+    background-color: #bb99ff;
+    border-radius: 10px;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+    justify-self: center;
+}
+
+    label:hover {
+        color: #000000;
+        background-color: #ff1a1a;
+    }
+
+header {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #000000;
+    border-radius: 10px;
+}
+
+    header a {
+        color: white;
+        padding: 10px 8px;
+        text-decoration: none;
+        display: block;
+    }
+
+#header {
+    background-color: black;
+    display: grid;
+    grid-template-columns: 40px 1fr auto;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "header-ico-area header-logo-area header-navbar";
+}
+
+#header-ico {
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    -webkit-transform: rotate(20deg);
+    justify-self: left;
+    grid-area: header-ico-area;
+}
+
+#header-img {
+    height: 40px;
+    width: 300px;
+    border-radius: 10px;
+    justify-self: left;
+    grid-area: header-logo-area;
+}
+
+#nav-bar {
+    height: 40px;
+    width: 317px;
+    overflow: hidden;
+    float: right;
+    grid-area: header-navbar;
+}
+
+.nav-link {
+    background-color: #b30000;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+    .nav-link:hover {
+        background-color: #ff8080;
+        color: #000000;
+    }
+
+#main {
+    display: grid;
+    justify-self: center;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "main-section1"
+        "main-section2"
+        "main-section3";
+}
+
+#title1 {
+    min-width: 600px;
+    text-align: center;
+    padding: 20px 5px 10px 5px;
+    justify-self: center;
+    grid-area: main-section1;
+}
+
+#form-label:hover {
+    background-color: green;
+}
+
+#main-grid {
+    justify-content: center;
+    display: grid;
+    justify-self: center;
+    grid-area: main-section2;
+    grid-gap: 10px;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "main-details"
+        "main-products"
+        "main-video";
+}
+
+@media (min-width: 900px) {
+    #main-grid {
+        grid-template-columns: 1fr 2fr auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "main-details main-products main-video";
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
+
+#form-prod-info {
+    border: 1px solid #1a1aff;
+    display: grid;
+    grid-area: main-details;
+    grid-template-columns: auto;
+    grid-template-rows: 50px auto;
+    grid-template-areas:
+        "dtl-lbl"
+        "dtl-text";
+}
+
+#prodInfoLabel {
+    justify-self: center;
+    grid-area: dtl-lbl;
+}
+
+#prodInfoDetail {
+    justify-self: center;
+    grid-area: dtl-text;
+}
+
+#form-products {
+    flex-wrap: wrap;
+    display: flex;
+    border: 2px solid #ffff1a;
+    padding: 5px 5px 5px 5px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    grid-area: main-products;
+    grid-gap: 10px;
+}
+
+#product {
+    border: 5px solid #e60000;
+    padding: 5px 5px 5px 5px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 50px 200px auto;
+    grid-template-areas:
+        "frm-lbl"
+        "frm-img"
+        "frm-dtl";
+}
+
+#prodLabel {
+    width: 150px;
+    justify-self: center;
+    grid-area: frm-lbl;
+}
+
+#prodImage {
+    height: 200px;
+    width: 300px;
+    border-radius: 10px;
+    justify-self: center;
+    grid-area: frm-img;
+}
+
+#prodDtl {
+    text-align: center;
+    justify-self: center;
+    grid-area: frm-dtl;
+}
+
+#video-src {
+    border: 1px solid #1a1aff;
+    padding: 5px 5px 5px 5px;
+    float: right;
+    display: grid;
+    justify-self: center;
+    grid-area: main-video;
+    grid-template-columns: auto;
+    grid-template-rows: 50px 200px auto;
+    grid-template-areas:
+        "vid-title"
+        "vid-src"
+        "vid-dtl";
+}
+
+#video-title {
+    width: 150px;
+    justify-self: center;
+    grid-area: vid-title;
+}
+
+#video {
+    height: 200px;
+    width: 300px;
+    border-radius: 10px;
+    justify-self: center;
+    grid-area: vid-src;
+}
+
+#video-sidedtl {
+    text-align: center;
+    justify-self: center;
+    grid-area: vid-dtl;
+}
+
+#verif-flex {
+    padding: 5px 5px 5px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: main-section3;
+}
+
+#email {
+}
+
+#submit {
+    height: 40px;
+    width: 60px;
+    background-color: #cc0000;
+    border-radius: 10px;
+    display: block;
+}
+
+#eventSchedule {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 5px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+th {
+    color: #ff1a1a;
+    background-color: black;
+}
+
+#contactUs {
+    text-align: center;
+}
+
